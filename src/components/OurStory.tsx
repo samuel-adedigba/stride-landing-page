@@ -81,7 +81,7 @@ const OurStory = () => {
     card: {
       container: "relative z-10 w-full max-w-sm sm:max-w-md lg:max-w-xl xl:max-w-2xl lg:mr-8 xl:mr-16 p-4 sm:p-6 lg:p-10",
       inner:
-        "rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-12 text-white shadow-2xl",
+        "rounded-[2.5rem] border border-white/5 bg-[#151719]/60 backdrop-blur-2xl px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-16 text-white shadow-2xl",
     },
   };
 
@@ -93,7 +93,7 @@ const OurStory = () => {
         animate={"visible"}
         className={styles.background}
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${"/team.avif"})`,
+          backgroundImage: `linear-gradient(rgba(15, 17, 19, 0.6), rgba(15, 17, 19, 0.8)), url(${"/team.avif"})`,
         }}
       />
 
@@ -125,13 +125,13 @@ const OurStory = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-              <h2 className="sm:hidden text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-3 sm:mb-4 lg:mb-6 tracking-tight">
+            <h2 className="sm:hidden text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-3 sm:mb-4 lg:mb-6 tracking-tight">
               <i>Our Story</i>
             </h2>
             <h1 className="hidden sm:block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-3 sm:mb-4 lg:mb-6 tracking-tight">
               <i>Our Story</i>
             </h1>
-            <div className="w-12 sm:w-16 lg:w-20 h-1 bg-primary rounded-full" />
+            <div className="w-12 sm:w-16 lg:w-20 h-1 bg-[#B6FF1A] rounded-full" />
           </motion.div>
 
           <motion.div

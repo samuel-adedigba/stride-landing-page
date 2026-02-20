@@ -26,7 +26,7 @@ body {
 } */
 
 @import "./design-tokens.css";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
 
 /* Tailwind v4 core styles */
 @import "tailwindcss";
@@ -36,16 +36,17 @@ body {
 /* @import "tailwindcss/utilities"; */
 
 :root {
-  --app-bg: #1E1E1E;
-  --text-primary: #ffffff;
-  --text-secondary: #e5e7eb;
-  --accent-color: #3b82f6;
+  --app-bg: var(--color-matte-black);
+  --text-primary: var(--color-soft-white);
+  --text-secondary: var(--color-soft-white);
+  --accent-color: var(--color-lemon-green);
 }
 /* Base reset & theme */
-html, body {
-  /* background-color: var(--background); */
-  /* color: var(--color-text-base); */
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+html,
+body {
+  background-color: var(--app-bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
   font-size: var(--text-body-size);
   line-height: var(--line-height-body);
   -webkit-font-smoothing: antialiased;
@@ -55,19 +56,19 @@ main {
   background-color: var(--app-bg);
   color: var(--text-primary);
   min-height: 100vh;
-  padding: 30px 5px;
 }
 /* Headings */
 h1 {
   font-size: var(--text-h1-size);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.2;
+  font-weight: var(--font-weight-black);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: var(--text-h2-size);
-  font-weight: var(--font-weight-semi);
-  line-height: 1.3;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
 }
 
 h3 {
@@ -75,50 +76,89 @@ h3 {
   font-weight: var(--font-weight-semi);
   line-height: 1.3;
 }
-h5 {
-  font-size: var(--text-h5-size);
-  /* font-weight: var(--font-weight-semi);
-  line-height: 1.3; */
-}
 
 p {
   font-size: var(--text-body-size);
   line-height: var(--line-height-body);
+  color: var(--text-secondary);
 }
 
 /* Divider Lines */
 hr {
-  border-color: var(--color-divider);
+  border-color: var(--color-border);
 }
+
 .bg-app {
   background-color: var(--app-bg);
 }
 
-/* Button Primary Utility Class */
+/* Button Primary Utility Class - High Impact */
 .button-primary {
-  background-color: var(--color-accent-yellow);
-  color: var(--color-text-base);
-  font-weight: 600;
-  padding: 14px 28px;
+  background-color: var(--color-lemon-green);
+  color: var(--color-matte-black);
+  font-weight: 800;
+  padding: 14px 32px;
   border-radius: var(--radius-button);
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-primary:hover {
-  background-color: var(--color-accent-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(182, 255, 26, 0.2);
+  filter: brightness(1.1);
 }
-code, pre {
+
+/* Button Secondary Utility Class - Contextual */
+.button-secondary {
+  background-color: var(--color-dark-gray);
+  color: var(--color-soft-white);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.button-secondary:hover {
+  background-color: #35393D;
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+code,
+pre {
   font-family: var(--font-geist-mono), monospace;
 }
 
 @keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* Utility classes */
 .animate-fadeDown {
@@ -135,10 +175,25 @@ code, pre {
 }
 /* Grow the vertical connector line from top to bottom */
 @keyframes scaleY {
-  from { transform: scaleY(0); }
-  to   { transform: scaleY(1); }
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 .animate-scaleY {
   animation: scaleY 1s ease-out forwards;
 }
 
+@keyframes scanline {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}

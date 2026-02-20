@@ -50,7 +50,7 @@ export default function FooterContactForm() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="text-sm text-gray-300 mb-8"
+        className="text-sm text-white/70 mb-8"
       >
         Get Your Own Smart Ride
       </motion.p>
@@ -96,15 +96,12 @@ export default function FooterContactForm() {
           />
 
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.01, backgroundColor: '#35393D' }}
+            whileTap={{ scale: 0.98 }}
             type="submit"
-            className="flex items-center justify-center bg-white text-black cursor-pointer font-light px-4 py-3 rounded-xl w-full transition-all border
-                     shadow-sm
-                    hover:bg-transparent hover:text-white focus:outline-none focus:ring-4 focus:ring-accent/30
-               duration-300"
+            className="flex items-center justify-center bg-[#2A2D30] text-[#F2F2F2] cursor-pointer font-bold px-4 py-3 rounded-xl w-full transition-all border border-white/5 shadow-xl hover:border-white/20 focus:outline-none focus:ring-4 focus:ring-white/10 duration-300 uppercase tracking-[0.2em] text-[10px]"
           >
-           Join Now
+            Join Now
           </motion.button>
         </form>
       )}

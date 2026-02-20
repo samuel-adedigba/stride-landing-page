@@ -1,42 +1,36 @@
 :root {
-  /* Light Mode Colors */
+  /* Brand Identity Colors */
+  --color-matte-black: #0F1113;
+  --color-lemon-green: #B6FF1A;
+  --color-soft-white: #F2F2F2;
+  --color-dark-gray: #2A2D30;
+
+  /* Functional Mappings */
+  --root-bg: var(--color-matte-black);
+  --text-primary: var(--color-soft-white);
+  --text-secondary: rgba(242, 242, 242, 0.8);
+  --accent-primary: var(--color-lemon-green);
+  --accent-soft: rgba(182, 255, 26, 0.15);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-card-bg: var(--color-dark-gray);
+
+  /* Typography */
   --root-font: 'Inter', sans-serif;
-  --root-bg: #1E1E1E
+  --radius-button: 8px;
 
-  --color-divider: #EEEEEE;
-
-  /* Button Radius */
-  --radius-button: 4px;
-
-  /* Typography Sizes & Weights */
-  /* --text-h1-size: 60px;
-  --text-h2-size: 40px;
-  --text-h3-size: 18px;
-  --text-body-size: 18px;
-  --line-height-body: 1.6;
-  --font-weight-bold: 600;
-  --font-weight-semi: 500;
-  --font-weight-regular: 400; */
-    /* Headings */
-  --text-h1-size: clamp(28px, 5vw, 50px);
-  --text-h2-size: clamp(26px, 4vw, 30px);
-  --text-h3-size: 18px;
-  --text-body-size: 18px;
-  /* --text-h3-size: clamp(12px, 3.5vw, 18px); */
-  /* --text-h4-size: clamp(18px, 3vw, 24px);
-  --text-h5-size: clamp(16px, 2.5vw, 20px);
-  --text-h6-size: clamp(14px, 2vw, 18px); */
-
-  /* Body text */
-  /* --text-body-size: clamp(10px, 2vw, 18px); */
+  /* Typography Sizes */
+  --text-h1-size: clamp(32px, 6vw, 64px);
+  --text-h2-size: clamp(28px, 5vw, 48px);
+  --text-h3-size: clamp(20px, 4vw, 32px);
+  --text-body-size: 16px;
   --line-height-body: 1.6;
 
   /* Font weights */
-  --font-weight-bold: 600;
-  --font-weight-semi: 500;
+  --font-weight-black: 900;
+  --font-weight-bold: 700;
+  --font-weight-semi: 600;
   --font-weight-regular: 400;
 
-  /* Font Families (from next/font) with fallback) */
-  --font-sans: var(sans-serif);
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 

@@ -11,7 +11,7 @@ function cn(...classes: (string | undefined)[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export type Variant = 'primary' | 'outline' | 'gradient'
+export type Variant = 'primary' | 'secondary' | 'outline' | 'gradient'
 type Size = 'sm' | 'md' | 'lg'
 
 interface BaseProps {
@@ -41,11 +41,12 @@ type Props = (LinkProps | ButtonProps) & {
 }
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  primary: 'bg-accent text-white hover:bg-accent/90 focus:ring-accent/50',
+  primary: 'bg-[#B6FF1A] text-[#0F1113] hover:brightness-110 focus:ring-[#B6FF1A]/50 font-extrabold uppercase tracking-widest',
+  secondary: 'bg-[#2A2D30] text-[#F2F2F2] hover:bg-[#35393D] hover:border-white/20 focus:ring-white/10 font-bold uppercase tracking-widest border border-white/5',
   outline:
-    'border border-accent text-accent hover:bg-accent/10 focus:ring-accent/50',
+    'border border-white/20 text-white hover:bg-white/5 focus:ring-white/10 font-bold uppercase tracking-widest',
   gradient:
-    'relative p-0.5 overflow-hidden bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 focus:ring-red-100',
+    'relative p-0.5 overflow-hidden bg-gradient-to-br from-[#B6FF1A] to-[#8FCC14] focus:ring-[#B6FF1A]/30 font-bold uppercase tracking-widest',
 }
 
 const SIZE_CLASSES: Record<Size, string> = {

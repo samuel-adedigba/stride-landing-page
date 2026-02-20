@@ -15,13 +15,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1E1E1E] text-white" id="contact-us">
+    <footer className="bg-[#0F1113] text-[#F2F2F2] border-t border-white/5" id="contact-us">
       <div className="max-w-screen w-full mx-auto md:p-10 p-6">
         <h2 className="sm:hidden mb-8">
           <i> Join our Waitlist </i>
         </h2>
         <h1 className="mb-8 hidden sm:block">
-           <i> Join our Waitlist </i>
+          <i> Join our Waitlist </i>
         </h1>
         <div className="grid md:grid-cols-2 gap-12 pb-12">
           <div>
@@ -39,11 +39,11 @@ export default function Footer() {
                   </li>
                 ))}
               </ul> */}
-              <div className="my-6">
-                <h4 className="text-sm  font-light">
+              <div className="my-6 space-y-2">
+                <h4 className="text-sm font-medium text-[#F2F2F2]">
                   +234 812-143-1583
                 </h4>
-                <h4 className="text-sm font-light">Lagos state, Nigeria.</h4>
+                <h4 className="text-sm font-medium text-[#AAAAAA]">Lagos state, Nigeria.</h4>
               </div>
               <div className="my-6">
                 <h4>© {year} by LyteLabs</h4>

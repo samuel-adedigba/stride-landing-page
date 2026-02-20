@@ -3,8 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Bike, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { AnimatedNavLink } from "./animations";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -91,14 +92,14 @@ export default function AnimatedNavbar() {
     if (!navRef.current) return;
     const links = navRef.current.querySelectorAll("a");
     links.forEach((link) => {
-      link.classList.toggle("text-accent", link.getAttribute("href") === path);
+      link.classList.toggle("text-[#B6FF1A]", link.getAttribute("href") === path);
     });
   };
 
   const navbarClass =
     isMounted && scrolled
-      ? "bg-transparent text-white"
-      : "bg-[#276D4F] text-white";
+      ? "bg-[#0F1113]/80 backdrop-blur-xl border-b border-white/5 shadow-2xl py-2"
+      : "bg-transparent py-4 text-[#F2F2F2]";
 
   return (
     <nav
@@ -107,8 +108,15 @@ export default function AnimatedNavbar() {
     >
       <div className="container mx-auto flex items-center justify-between p-3">
         <Link href="/" className="flex flex-1 items-center space-x-2 sm:space-x-4">
-          <Bike className="w-5 h-5 sm:w-6 sm:h-6" />
-          <p className="text-base sm:text-lg lg:text-xl font-medium">LYTELABS</p>
+          <div className="relative w-8 h-8 sm:w-10 sm:h-10 overflow-hidden rounded-lg">
+            <Image
+              src="/stride_icon.png"
+              alt="Stride EV Logo"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-base sm:text-lg lg:text-xl font-black tracking-tight italic">STRIDE <span className="text-[#F2F2F2]/80">EV</span></p>
         </Link>
 
         {/* Desktop Nav - Hide Home link */}
@@ -116,19 +124,19 @@ export default function AnimatedNavbar() {
           {SECTIONS.map(({ id, label, path }) => {
             // Hide Home link on desktop
             if (id === "hero") return null;
-            
+
             return path.startsWith("/#") ? (
               <AnimatedNavLink
                 key={id}
                 href={path}
                 label={label}
-                className="hover:text-accent transition-colors duration-300 text-sm lg:text-base px-2 py-1"
+                className="hover:text-white transition-colors duration-300 text-xs lg:text-sm px-2 py-1 font-bold tracking-[0.2em] uppercase"
               />
             ) : (
               <Link
                 key={id}
                 href={path}
-                className="hover:text-accent transition-colors duration-300 text-sm lg:text-base px-2 py-1"
+                className="hover:text-white transition-colors duration-300 text-xs lg:text-sm px-2 py-1 font-bold tracking-[0.2em] uppercase"
               >
                 {label}
               </Link>
@@ -158,7 +166,7 @@ export default function AnimatedNavbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[99999] bg-[#1E1E1E] text-white flex flex-col items-center justify-start p-4 sm:p-8"
+            className="fixed inset-0 z-[99999] bg-[#0F1113] text-[#F2F2F2] flex flex-col items-center justify-start p-4 sm:p-8"
             style={{
               position: "fixed",
               top: 0,
@@ -170,11 +178,18 @@ export default function AnimatedNavbar() {
             <div className="flex w-full items-center justify-between mb-8 sm:mb-12">
               <Link
                 href="/"
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-4"
                 onClick={() => setMobileOpen(false)}
               >
-                <Bike className="w-6 h-6" />
-                <p className="text-lg font-medium">LYTELABS</p>
+                <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-white/20 shadow-xl">
+                  <Image
+                    src="/stride_icon.png"
+                    alt="Stride EV Logo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-xl font-black tracking-tight italic">STRIDE <span className="text-[#F2F2F2]/80">EV</span></p>
               </Link>
               <button
                 className="p-2 rounded-md hover:bg-white/10 transition-colors duration-200"

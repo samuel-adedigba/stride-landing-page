@@ -8,7 +8,7 @@ const springValues = {
 };
 
 export default function TiltedCard({
-  imageSrc = "/marketplace/lytelabs_logo.jpeg",
+  imageSrc = "/Stride_logo.jpeg",
   altText = "Tilted card image",
   captionText = "",
   containerHeight = "300px",
@@ -30,7 +30,7 @@ export default function TiltedCard({
       }}
     >
       {showMobileWarning && (
-        <div className="absolute top-4 text-center text-sm block sm:hidden">
+        <div className="absolute top-4 text-center text-sm block sm:hidden text-white/70 font-medium">
           This effect is not optimized for mobile. Check on desktop.
         </div>
       )}
@@ -71,10 +71,10 @@ export default function TiltedCard({
           </motion.div>
         )}
       </motion.div>
-      
+
 
       {showTooltip && captionText && (
-        <figcaption className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-100 z-[3] hidden sm:block">
+        <figcaption className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-[#B6FF1A] px-[10px] py-[4px] text-[10px] text-[#0F1113] font-black uppercase tracking-wider opacity-100 z-[3] hidden sm:block">
           {captionText}
         </figcaption>
       )}

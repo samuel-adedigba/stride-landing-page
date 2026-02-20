@@ -17,101 +17,88 @@ const config: Config = {
       'xl': '1280px',
       '2xl': '1536px',
       // Custom breakpoints
-      'mobile': {'max': '767px'},
-      'tablet': {'min': '768px', 'max': '1023px'},
-      'desktop': {'min': '1024px'},
+      'mobile': { 'max': '767px' },
+      'tablet': { 'min': '768px', 'max': '1023px' },
+      'desktop': { 'min': '1024px' },
       // Landscape orientation
-      'landscape': {'raw': '(orientation: landscape)'},
+      'landscape': { 'raw': '(orientation: landscape)' },
       // High DPI screens
-      'retina': {'raw': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'},
+      'retina': { 'raw': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)' },
     },
-    
+
     extend: {
       // Enhanced color system
       colors: {
-        // Primary brand colors
+        // Primary brand colors - Lemon Green
         primary: {
-          50: '#FEF7E0',
-          100: '#FDECC2',
-          200: '#FBD885',
-          300: '#F9C547',
-          400: '#F7B219',
-          500: '#F5B301', // Main primary
-          600: '#E0A800',
-          700: '#B8890D',
-          800: '#8F6A14',
-          900: '#664C18',
-        },
-        
-        // Accent colors
-        accent: {
-          50: '#E6F7F4',
-          100: '#B3EBE1',
-          200: '#80DFCE',
-          300: '#4DD3BB',
-          400: '#26C7A8',
-          500: '#00B894', // Main accent
-          600: '#00A085',
-          700: '#008876',
-          800: '#007067',
-          900: '#005858',
+          50: '#F8FFE5',
+          100: '#EFFFCC',
+          200: '#DFFF99',
+          300: '#CFFF66',
+          400: '#C3FF33',
+          500: '#B6FF1A', // Main Lemon Green
+          600: '#A2E617',
+          700: '#8FCC14',
+          800: '#7BB311',
+          900: '#689A0E',
         },
 
-        // Neutral grays
+        // Accent colors - Using Soft White / Dark Gray variations
+        accent: {
+          50: '#FDFDFD',
+          100: '#F9F9F9',
+          200: '#F2F2F2', // Soft White
+          300: '#E5E5E5',
+          400: '#D4D4D4',
+          500: '#2A2D30', // Dark Gray
+          600: '#232629',
+          700: '#1C1E21',
+          800: '#151719',
+          900: '#0F1113', // Matte Black
+        },
+
+        // Neutral grays aligned with brand
         gray: {
           50: '#F9FAFB',
-          100: '#F3F4F6',
+          100: '#F2F2F2',
           200: '#E5E7EB',
           300: '#D1D5DB',
           400: '#9CA3AF',
           500: '#6B7280',
           600: '#4B5563',
           700: '#374151',
-          800: '#1F2937',
-          900: '#111827',
-          950: '#030712',
+          800: '#2A2D30',
+          900: '#1F2937',
+          950: '#0F1113',
         },
 
-        // Dark theme colors
-        dark: {
-          50: '#F8FAFC',
-          100: '#F1F5F9',
-          200: '#E2E8F0',
-          300: '#CBD5E1',
-          400: '#94A3B8',
-          500: '#64748B',
-          600: '#475569',
-          700: '#334155',
-          800: '#1E293B',
-          900: '#0F172A',
-          950: '#020617',
+        // Brand Palette Shortcuts
+        brand: {
+          black: '#0F1113',
+          lemon: '#B6FF1A',
+          white: '#F2F2F2',
+          gray: '#2A2D30',
         },
-
-        // Semantic colors
-        success: '#10B981',
-        warning: '#F59E0B',
-        error: '#EF4444',
-        info: '#3B82F6',
 
         // Background colors
-        background: '#1E1E1E',
-        backgroundSecondary: '#f8f9fa',
-        surface: '#ffffff',
-        surfaceDark: '#1f2937',
+        background: '#0F1113',
+        backgroundSecondary: '#2A2D30',
+        surface: '#151719',
+        surfaceDark: '#0F1113',
 
         // Text colors
-        textPrimary: '#111827',
-        textSecondary: '#6B7280',
-        textTertiary: '#9CA3AF',
-        textInverse: '#ffffff',
+        textPrimary: '#F2F2F2',
+        textSecondary: '#AAAAAA',
+        textTertiary: '#777777',
+        textInverse: '#0F1113',
 
         // Border and divider colors
-        border: '#E5E7EB',
-        borderDark: '#374151',
-        divider: '#E5E7EB',
-        dividerDark: '#4B5563',
+        border: 'rgba(255, 255, 255, 0.1)',
+        borderDark: 'rgba(255, 255, 255, 0.05)',
+        divider: 'rgba(255, 255, 255, 0.1)',
+        dividerDark: 'rgba(255, 255, 255, 0.05)',
       },
-            fontFamily: {
+      fontFamily: {
         inter: ['Inter', 'system-ui', 'sans-serif'],
       },
 
@@ -123,7 +110,7 @@ const config: Config = {
         'display-lg': ['clamp(36px, 7vw, 96px)', { lineHeight: '1.1', fontWeight: '600' }],
         'display-md': ['clamp(32px, 6vw, 72px)', { lineHeight: '1.1', fontWeight: '600' }],
         'display-sm': ['clamp(28px, 5vw, 60px)', { lineHeight: '1.2', fontWeight: '600' }],
-        
+
         // Heading sizes
         'h1': ['clamp(28px, 5vw, 48px)', { lineHeight: '1.2', fontWeight: '600' }],
         'h2': ['clamp(24px, 4vw, 36px)', { lineHeight: '1.3', fontWeight: '600' }],
@@ -131,14 +118,14 @@ const config: Config = {
         'h4': ['clamp(18px, 3vw, 24px)', { lineHeight: '1.4', fontWeight: '500' }],
         'h5': ['clamp(16px, 2.5vw, 20px)', { lineHeight: '1.4', fontWeight: '500' }],
         'h6': ['clamp(14px, 2vw, 18px)', { lineHeight: '1.5', fontWeight: '500' }],
-        
+
         // Body text
         'body-xl': ['clamp(18px, 2.5vw, 22px)', { lineHeight: '1.6', fontWeight: '400' }],
         'body-lg': ['clamp(16px, 2.2vw, 20px)', { lineHeight: '1.6', fontWeight: '400' }],
         'body': ['clamp(14px, 2vw, 18px)', { lineHeight: '1.6', fontWeight: '400' }],
         'body-sm': ['clamp(13px, 1.8vw, 16px)', { lineHeight: '1.5', fontWeight: '400' }],
         'body-xs': ['clamp(12px, 1.6vw, 14px)', { lineHeight: '1.5', fontWeight: '400' }],
-        
+
         // Caption and small text
         'caption': ['clamp(11px, 1.4vw, 13px)', { lineHeight: '1.4', fontWeight: '400' }],
         'overline': ['clamp(10px, 1.2vw, 12px)', { lineHeight: '1.4', fontWeight: '500', letterSpacing: '0.1em' }],
@@ -164,7 +151,7 @@ const config: Config = {
         '1.5': '6px',
         '2.5': '10px',
         '3.5': '14px',
-        
+
         // Responsive spacing using clamp
         'xs': 'clamp(4px, 1vw, 8px)',
         'sm': 'clamp(8px, 2vw, 16px)',
@@ -175,13 +162,13 @@ const config: Config = {
         '3xl': 'clamp(64px, 8vw, 96px)',
         '4xl': 'clamp(96px, 10vw, 128px)',
         '5xl': 'clamp(128px, 12vw, 160px)',
-        
+
         // Section spacing
         'section-sm': 'clamp(40px, 6vw, 60px)',
         'section': 'clamp(60px, 8vw, 80px)',
         'section-lg': 'clamp(80px, 10vw, 120px)',
         'section-xl': 'clamp(120px, 12vw, 160px)',
-        
+
         // Container spacing
         'container-sm': 'clamp(16px, 4vw, 24px)',
         'container': 'clamp(24px, 5vw, 32px)',
@@ -228,27 +215,27 @@ const config: Config = {
         'fadeUp': 'fadeUp 0.6s ease-out forwards',
         'fadeLeft': 'fadeLeft 0.6s ease-out forwards',
         'fadeRight': 'fadeRight 0.6s ease-out forwards',
-        
+
         // Scale animations
         'scaleIn': 'scaleIn 0.4s ease-out forwards',
         'scaleOut': 'scaleOut 0.4s ease-out forwards',
         'scaleY': 'scaleY 1s ease-out forwards',
-        
+
         // Slide animations
         'slideDown': 'slideDown 0.4s ease-out forwards',
         'slideUp': 'slideUp 0.4s ease-out forwards',
         'slideLeft': 'slideLeft 0.4s ease-out forwards',
         'slideRight': 'slideRight 0.4s ease-out forwards',
-        
+
         // Bounce and elastic
         'bounceIn': 'bounceIn 0.6s ease-out forwards',
         'elastic': 'elastic 0.8s ease-out forwards',
-        
+
         // Loading animations
         'spin-slow': 'spin 3s linear infinite',
         'pulse-slow': 'pulse 3s ease-in-out infinite',
         'bounce-slow': 'bounce 2s infinite',
-        
+
         // Hover animations
         'float': 'float 3s ease-in-out infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
@@ -281,7 +268,7 @@ const config: Config = {
           'from': { opacity: '0', transform: 'translateX(20px)' },
           'to': { opacity: '1', transform: 'translateX(0)' }
         },
-        
+
         // Scale keyframes
         scaleIn: {
           'from': { opacity: '0', transform: 'scale(0.9)' },
@@ -295,7 +282,7 @@ const config: Config = {
           'from': { transform: 'scaleY(0)' },
           'to': { transform: 'scaleY(1)' }
         },
-        
+
         // Slide keyframes
         slideDown: {
           'from': { transform: 'translateY(-100%)' },
@@ -313,7 +300,7 @@ const config: Config = {
           'from': { transform: 'translateX(-100%)' },
           'to': { transform: 'translateX(0)' }
         },
-        
+
         // Special effects
         bounceIn: {
           '0%': { opacity: '0', transform: 'scale(0.3)' },

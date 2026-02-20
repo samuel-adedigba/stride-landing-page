@@ -22,44 +22,45 @@ export default function HeroSection() {
     >
       {/* Mobile Layout */}
       <div className="flex flex-col items-center justify-start pt-20 pb-0 text-center text-white sm:hidden">
-      
+
         <motion.h1
           className="text-4xl font-extrabold leading-tight italic"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-         Ride, Swap, Deliver, Repeat
+          Ride, Swap, Deliver, Repeat
         </motion.h1>
 
         <motion.h3
-          className="mt-2 text-sm text-gray-300"
+          className="mt-2 text-sm text-white/80"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-           Power Your Journey with Innovation
+          Power Your Journey with Innovation
         </motion.h3>
 
         <Button
-          variant="outline"
+          variant="secondary"
           href="#/contact-us"
           size="sm"
-          className="mt-4 mb-4 inline-flex justify-center items-center rounded-lg border border-gray-300 bg-white text-gray-900 font-light shadow-sm hover:bg-transparent hover:text-white focus:outline-none focus:ring-4 focus:ring-accent/30 transition-colors duration-300 px-4 py-2 text-xs"
+          className="mt-4 mb-4"
         >
-         Explore LyteLabs Ev-Bike
+          Explore Stride EV
         </Button>
 
-        <div className="w-full">
+        <div className="w-full relative">
           <Image
-            src="/bike_hero.avif"
-            alt="LyteLabs Ev-Bike Hero"
+            src="/Stride_bike.jpeg"
+            alt="Stride EV Hero"
             width={1000}
             height={600}
             className="w-full h-auto object-cover block"
             priority
             style={{ display: 'block', margin: 0, padding: 0 }}
           />
+          <div className="absolute inset-0 bg-black/40 sm:hidden" />
         </div>
       </div>
 
@@ -71,13 +72,15 @@ export default function HeroSection() {
           style={{ y }}
         >
           <Image
-            src="/bike_hero.avif"
-            alt="LyteLabs Ev-Bike Hero"
+            src="/Stride_bike.jpeg"
+            alt="Stride EV Hero"
             fill
             sizes="100vw"
             className="object-cover object-center"
             priority
           />
+          {/* Hero Overlay for contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/60" />
         </motion.div>
 
         {/* Foreground Content */}
@@ -92,7 +95,7 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.h3
-            className="mt-4 text-lg md:text-xl text-gray-200 max-w-lg"
+            className="mt-4 text-lg md:text-xl text-white/90 max-w-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -101,12 +104,11 @@ export default function HeroSection() {
           </motion.h3>
 
           <Button
-            variant="outline"
             href="#contact-us"
-            size="md"
-            className="mt-8 inline-flex justify-center items-center rounded-lg border border-gray-300 bg-white text-gray-900 font-extralight shadow-sm hover:bg-transparent hover:text-white focus:outline-none focus:ring-4 focus:ring-accent/30 transition-colors duration-300 px-6 py-3 text-base"
+            variant="secondary"
+            className="mt-8 px-10 py-4 shadow-2xl"
           >
-            Explore LyteLabs Ev-Bike
+            Explore Stride EV
           </Button>
         </div>
       </div>
