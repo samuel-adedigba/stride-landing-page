@@ -46,7 +46,7 @@ export default function Footer() {
                 <h4 className="text-sm font-medium text-[#AAAAAA]">Lagos state, Nigeria.</h4>
               </div>
               <div className="my-6">
-                <h4>© {year} by LyteLabs</h4>
+                <h4>© {year} by Stride Ev</h4>
                 <h4>Powered and secured by Engineering Team</h4>
               </div>
             </div>

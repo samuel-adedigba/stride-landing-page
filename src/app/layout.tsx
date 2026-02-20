@@ -13,14 +13,14 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lytelabs.com'),
+  metadataBase: new URL('https://strideev.co'),
   title: "Stride EV - Smart, Reliable & Innovative Transportation",
   description: "Stride EV delivers efficiency with smart transportation solutions. Experience reliable, innovative e-bikes designed for the modern hustle.",
   keywords: ["Stride EV", "Smart Transportation", "Reliable", "Innovative", "Delivers Efficiency", "E-Bikes", "Logistics", "Lagos", "Nigeria"],
   openGraph: {
     title: "Stride EV - Smart & Reliable Transportation",
     description: "Stride EV delivers efficiency and innovation. The smartest way to move.",
-    url: "https://lytelabs.com",
+    url: "https://strideev.co",
     siteName: "Stride EV",
     images: [
       {
