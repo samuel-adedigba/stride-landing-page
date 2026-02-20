@@ -14,11 +14,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lytelabs.com'),
-  title: "Stride EV - Smart E-Bikes for the Modern Commuter",
-  description: "Smarter Rides, Elevated Vibes",
+  title: "Stride EV - Smart, Reliable & Innovative Transportation",
+  description: "Stride EV delivers efficiency with smart transportation solutions. Experience reliable, innovative e-bikes designed for the modern hustle.",
+  keywords: ["Stride EV", "Smart Transportation", "Reliable", "Innovative", "Delivers Efficiency", "E-Bikes", "Logistics", "Lagos", "Nigeria"],
   openGraph: {
-    title: "Stride EV",
-    description: "Power Your Journey with Innovation ",
+    title: "Stride EV - Smart & Reliable Transportation",
+    description: "Stride EV delivers efficiency and innovation. The smartest way to move.",
     url: "https://lytelabs.com",
     siteName: "Stride EV",
     images: [
@@ -26,16 +27,16 @@ export const metadata: Metadata = {
         url: "/stride_icon.png",
         width: 1200,
         height: 630,
-        alt: "Stride EV Hero Image",
+        alt: "Stride EV - Smart Transportation",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lytelabs",
+    title: "Stride EV",
     description:
-      "Join the green future with modular energy and mobility solutions.",
+      "Stride EV delivers efficiency with smart transportation solutions.",
     images: ["/stride_icon.png"],
   },
   icons: {

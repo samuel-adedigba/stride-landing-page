@@ -95,13 +95,13 @@ export default function StrideFeaturesSection() {
           transition={{ duration: 0.8 }}
           className="mb-12 sm:mb-20 space-y-4"
         >
-          <div className="w-16 h-1 bg-[#B6FF1A]/40 rounded-full mb-6" />
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight max-w-3xl leading-tight">
-            <i>Smarts That Move You <span className="text-white/50">Without Stress</span></i>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tighter max-w-3xl leading-[1.1] italic uppercase">
+            Smart <span className="text-white/50">Transportation</span>
           </h2>
-          <p className="text-base sm:text-lg text-white/60 leading-relaxed max-w-2xl font-sans">
-            Unlock next-level features that make every ride safer, smoother,
-            and completely stress-free.
+          <div className="w-12 h-0.5 bg-[#B6FF1A]/30 rounded-full mt-3" />
+          <p className="text-sm sm:text-base text-white/60 leading-relaxed max-w-2xl font-sans">
+            Reliable, innovative technology that delivers efficiency. Stride EV is built for the hustle,
+            keeping you moving faster.
           </p>
         </motion.div>
 
@@ -135,10 +135,10 @@ export default function StrideFeaturesSection() {
                   </motion.div>
 
                   <div className="space-y-3">
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
+                    <h3 className="text-lg sm:text-xl font-bold tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-white/60 text-sm sm:text-base leading-relaxed group-hover:text-white/90 transition-colors duration-300 font-sans">
+                    <p className="text-white/60 text-[13px] sm:text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300 font-sans">
                       {feature.description}
                     </p>
                   </div>

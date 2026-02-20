@@ -41,7 +41,7 @@ export default function Footer() {
               </ul> */}
               <div className="my-6 space-y-2">
                 <h4 className="text-sm font-medium text-[#F2F2F2]">
-                  +234 812-143-1583
+                  +234 810 850 3866
                 </h4>
                 <h4 className="text-sm font-medium text-[#AAAAAA]">Lagos state, Nigeria.</h4>
               </div>

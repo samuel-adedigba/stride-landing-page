@@ -59,17 +59,12 @@ const TiltCardParallax = () => {
       >
         <div className="sm:hidden pr-4">
           <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 leading-tight">
-            <i>
-              Join Waitlist
-            </i>
+            <i>Built for the Hustle</i>
           </h2>
         </div>
         <div className="hidden sm:block">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3">
-            <i>
-              Join Waitlist
-            </i>
-
+            <i>Built for the Hustle</i>
           </h1>
         </div>
         <p className="text-sm sm:text-base md:text-base lg:text-base mb-4 sm:mb-5 leading-relaxed">

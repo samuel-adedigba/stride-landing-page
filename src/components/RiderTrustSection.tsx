@@ -37,13 +37,13 @@ const RiderTrustSection = () => {
                     viewport={{ once: true }}
                     className="mb-16 space-y-4 text-left"
                 >
-                    <div className="w-16 h-1 bg-white/40 rounded-full mb-6" />
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight max-w-3xl leading-tight font-sans">
-                        <i>Total Command <span className="text-white/60">of Your Fleet</span></i>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tighter max-w-3xl leading-[1.1] italic uppercase">
+                        The Hustle <span className="text-white/60">Never Stops</span>
                     </h2>
-                    <p className="text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed font-sans">
-                        Stride EV provides the intelligence needed to operate at scale. Track every asset in real-time
-                        with precision telemetry and comprehensive fleet diagnostics.
+                    <div className="w-12 h-0.5 bg-white/20 rounded-full mt-3" />
+                    <p className="text-sm sm:text-base text-white/80 max-w-2xl leading-relaxed font-sans mt-4">
+                        Stride EV provides the intelligence needed for maximum efficiency in motion.
+                        Ride smart, deliver fast, and dominate the streets with precision telemetry.
                     </p>
                 </motion.div>
 
@@ -156,10 +156,10 @@ const RiderTrustSection = () => {
                         className="relative md:col-span-1 md:row-span-2 border border-white/10 rounded-[2rem] overflow-hidden group shadow-2xl bg-black"
                     >
                         <Image
-                            src="/Rider Image.jpg"
+                            src="/Stride_bike_man.jpeg"
                             alt="Professional Integrity"
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
+                            className="object-cover object-top transition-transform duration-700 group-hover:scale-105 opacity-90"
                         />
 
                         {/* Top Badge */}
@@ -176,7 +176,7 @@ const RiderTrustSection = () => {
                         <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/40 to-transparent">
                             <div className="flex flex-col gap-4">
                                 <div className="flex items-center gap-3 text-white">
-                                    <span className="text-5xl font-black italic tracking-tighter font-sans">4.95</span>
+                                    <span className="text-4xl font-black italic tracking-tighter font-sans">4.95</span>
                                     <div className="flex flex-col leading-none">
                                         <div className="flex gap-0.5 mb-1.5">
                                             {[...Array(5)].map((_, i) => (
@@ -204,9 +204,9 @@ const RiderTrustSection = () => {
                             className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 brightness-50"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col items-center justify-center p-8 text-center px-4">
-                            <span className="text-white/80 text-xl font-medium mb-1 font-sans">Operation Scale:</span>
-                            <h3 className="text-7xl lg:text-8xl font-black text-white mb-2 tracking-tighter italic leading-none font-sans">15,000+</h3>
-                            <p className="text-white font-black uppercase tracking-[0.3em] text-[10px] items-center flex gap-3">
+                            <span className="text-white/80 text-lg font-medium mb-1 font-sans">Operation Scale:</span>
+                            <h3 className="text-5xl lg:text-6xl font-black text-white mb-2 tracking-tighter italic leading-none font-sans">15,000+</h3>
+                            <p className="text-white font-black uppercase tracking-[0.3em] text-[9px] items-center flex gap-3">
                                 <span className="w-4 h-[1px] bg-white/40" />
                                 Successful Missions
                                 <span className="w-4 h-[1px] bg-white/40" />
@@ -225,12 +225,12 @@ const RiderTrustSection = () => {
                                 <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white font-sans">Never Stop</span>
                             </div>
 
-                            <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter italic leading-[0.95] font-sans">
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white tracking-tighter italic leading-[1] font-sans">
                                 No Downtime, <br />
                                 <span className="text-white/70">Just Hustle</span>
                             </h3>
 
-                            <p className="text-base sm:text-lg text-white/90 max-w-lg leading-relaxed font-sans mt-2">
+                            <p className="text-sm sm:text-base text-white/90 max-w-lg leading-relaxed font-sans mt-2">
                                 When your battery runs low, don&apos;t stop. Head to a Stride Station,
                                 switch in a fresh battery, and get back on the road in minutes.
                                 <span className="text-white block mt-2 font-black">More deliveries, no interruptions.</span>

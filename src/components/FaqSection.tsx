@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Plus, Minus, Sparkles } from "lucide-react";
 import Image from "next/image";
 
@@ -82,8 +82,34 @@ const FaqItem = ({ question, answer, isOpen, onClick }: { question: string, answ
 export default function FaqSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+    // 3D Tilt Logic
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const mouseX = useSpring(x, { stiffness: 500, damping: 100 });
+    const mouseY = useSpring(y, { stiffness: 500, damping: 100 });
+
+    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["7deg", "-7deg"]);
+    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-7deg", "7deg"]);
+
+    // Parallax logic for internal image
+    const imageX = useTransform(mouseX, [-0.5, 0.5], ["-3%", "3%"]);
+    const imageY = useTransform(mouseY, [-0.5, 0.5], ["-3%", "3%"]);
+
+    const handleMouseMove = ({ currentTarget, clientX, clientY }: React.MouseEvent) => {
+        const { left, top, width, height } = currentTarget.getBoundingClientRect();
+        x.set((clientX - left) / width - 0.5);
+        y.set((clientY - top) / height - 0.5);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };
+
+
     return (
-        <section id="faq" className="w-full bg-transparent px-4 py-16 sm:px-8 sm:py-24 lg:px-20 overflow-hidden relative">
+        <section id="faq" className="w-full bg-transparent px-4 py-16 sm:px-8 sm:py-24 lg:px-20 overflow-hidden relative" style={{ perspective: 1000 }}>
             {/* Background Decorative Gradient */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
@@ -132,29 +158,45 @@ export default function FaqSection() {
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="relative order-1 lg:order-2 lg:col-span-5 group"
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={handleMouseLeave}
+                    style={{
+                        rotateX,
+                        rotateY,
+                        transformStyle: "preserve-3d",
+                    }}
                 >
-                    <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#151719] border border-white/5 aspect-[4/5] sm:aspect-square lg:aspect-[4/5] transform transition-transform duration-700 hover:scale-[1.02]">
-                        <Image
-                            src="/stride_ev_bike_front.png"
-                            alt="Stride EV Electric Bike Front View"
-                            fill
-                            className="object-cover object-center"
-                            priority
-                        />
+                    <motion.div
+                        className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#151719] border border-white/5 aspect-[4/5] sm:aspect-square lg:aspect-[4/5]"
+                        style={{
+                            transform: "translateZ(20px)",
+                            transformStyle: "preserve-3d",
+                        }}
+                    >
+                        <motion.div
+                            className="absolute inset-0"
+                            style={{ x: imageX, y: imageY, scale: 1.1 }}
+                        >
+                            <Image
+                                src="/Stride_bike.jpeg"
+                                alt="Stride EV Electric Bike Front View"
+                                fill
+                                className="object-cover object-center"
+                                priority
+                            />
+                        </motion.div>
+
 
                         {/* FAQ Badge - Aligned with the bike's perspective */}
-                        <div className="absolute top-8 right-8 bg-[#0F1113]/80 text-[#F2F2F2] px-5 py-2 rounded-xl font-bold text-xs uppercase shadow-2xl tracking-[0.2em] backdrop-blur-md border border-white/10">
+                        <motion.div
+                            className="absolute top-8 right-8 bg-[#0F1113]/80 text-[#F2F2F2] px-5 py-2 rounded-xl font-bold text-xs uppercase shadow-2xl tracking-[0.2em] backdrop-blur-md border border-white/10"
+                            style={{ transform: "translateZ(60px)" }}
+                        >
                             FAQ
-                        </div>
-
-                        {/* Sparkle Icon - Premium feel */}
-                        <div className="absolute bottom-8 right-8 text-white/60">
-                            <Sparkles className="animate-pulse" size={40} strokeWidth={1.5} />
-                        </div>
-
+                        </motion.div>
                         {/* Overlay Gradient for depth */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                    </div>
+                    </motion.div>
 
                     {/* Subtle Outer Frame/Glow */}
                     <div className="absolute -inset-4 border border-white/5 rounded-[3rem] -z-10 blur-[2px]" />

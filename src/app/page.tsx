@@ -11,14 +11,6 @@ export default function Home() {
   return (
     <>
       <div >
-        <div>
-          <title>LyteLabs - Smart E-Bikes</title>
-          <meta
-            name="description"
-            content="LyteLabs - Smart E-Bikes for the Modern Commuter"
-          />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </div>
         <section id="hero" className="h-auto w-full overflow-hidden">
           <HeroSection />
         </section>
@@ -40,14 +32,14 @@ export default function Home() {
                 "I like what you guys are doing, once everything is working well as expected, I am sure all riders will switch to your product.",
               author: "Ubong",
               title: "Chowdeck Dispatch Rider",
-              image: "/Rider Image.jpg",
+              image: "/stride_rider.jpeg",
             },
             {
               quote:
                 "When will it launch? Once everything is fixed, the speed is increased, I will purchase it, money is not a problem, as long as it delivers for me.",
-              author: "Emmanuel",
-              title: "Chowdeck Dispatch Rider",
-              image: "/Market.avif",
+              author: "Amara",
+              title: "Item 7 Dispatch Rider",
+              image: "/stride_rider_woman.jpeg",
             },
           ]}
         />

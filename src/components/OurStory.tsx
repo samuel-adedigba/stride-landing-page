@@ -93,7 +93,7 @@ const OurStory = () => {
         animate={"visible"}
         className={styles.background}
         style={{
-          backgroundImage: `linear-gradient(rgba(15, 17, 19, 0.6), rgba(15, 17, 19, 0.8)), url(${"/team.avif"})`,
+          backgroundImage: `linear-gradient(rgba(15, 17, 19, 0.4), rgba(15, 17, 19, 0.7)), url(${"/swap_station.jpeg"})`,
         }}
       />
 
@@ -125,12 +125,12 @@ const OurStory = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <h2 className="sm:hidden text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-3 sm:mb-4 lg:mb-6 tracking-tight">
-              <i>Our Story</i>
+            <h2 className="sm:hidden text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-6 tracking-tight italic uppercase">
+              <i>Built for the hustle, <br /> one swap at a time</i>
             </h2>
-            <h1 className="hidden sm:block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-3 sm:mb-4 lg:mb-6 tracking-tight">
-              <i>Our Story</i>
-            </h1>
+            <h3 className="hidden sm:block text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 tracking-tighter italic uppercase leading-tight">
+              <i>Built for the hustle, <br /> one swap at a time</i>
+            </h3>
             <div className="w-12 sm:w-16 lg:w-20 h-1 bg-[#B6FF1A] rounded-full" />
           </motion.div>
 
@@ -145,22 +145,9 @@ const OurStory = () => {
               variants={animations.fadeIn}
               transition={{ delay: 0.8 }}
             >
-              LyteLabs was born out of a passion for clean energy and a
-              commitment to redefining how Africans power their homes and move
-              through their cities. Our innovative ecosystem combines a smart
-              power device and a rugged e-bike, both powered by a removable,
-              swappable battery system that offers unmatched flexibility and
-              convenience.
-            </motion.p>
-            <motion.p
-              variants={animations.fadeIn}
-              transition={{ delay: 1.0 }}
-            >
-              Built for everyday life, our products help users cut down on
-              emissions, reduce dependence on fossil fuels, and embrace a more
-              sustainable lifestyle. Founded with a bold vision for energy
-              independence, LyteLabs is driving the future of clean mobility and
-              portable power, one battery at a time.
+              When your battery runs low, don’t stop. Head to a StrideEv Swap Station,
+              switch in a fresh battery, and get back on the road in minutes.
+              More deliveries, no interruptions.
             </motion.p>
           </motion.div>
         </motion.div>
