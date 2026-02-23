@@ -159,7 +159,7 @@ export default function StrideFeaturesSection() {
           <Button
             variant="secondary"
             size="lg"
-            href="/contact-us"
+            href="#contact-us"
             className="px-12"
           >
             Connect With Us

@@ -56,7 +56,7 @@ export default function HeroSection() {
         >
           <Button
             variant="secondary"
-            href="#/contact-us"
+            href="#contact-us"
             size="sm"
             className="px-8 py-4"
           >

@@ -205,10 +205,10 @@ const RiderTrustSection = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col items-center justify-center p-8 text-center px-4">
                             <span className="text-white/80 text-lg font-medium mb-1 font-sans">Operation Scale:</span>
-                            <h3 className="text-5xl lg:text-6xl font-black text-white mb-2 tracking-tighter italic leading-none font-sans">15,000+</h3>
+                            <h3 className="text-5xl lg:text-6xl font-black text-white mb-2 tracking-tighter italic leading-none font-sans">100+</h3>
                             <p className="text-white font-black uppercase tracking-[0.3em] text-[9px] items-center flex gap-3">
                                 <span className="w-4 h-[1px] bg-white/40" />
-                                Successful Missions
+                                Registered Riders
                                 <span className="w-4 h-[1px] bg-white/40" />
                             </p>
                         </div>
